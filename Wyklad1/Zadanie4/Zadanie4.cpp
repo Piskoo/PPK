@@ -6,11 +6,14 @@ int main()
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            if (i > j) {
+            if (j > i)
                 std::cout << ".";
-            }
-            else
+        }
+        for (int k = 0; k < N; k++)
+        {
+            if (k <= i) {
                 std::cout << "X";
+            }
         }
         std::cout << std::endl;
     }
