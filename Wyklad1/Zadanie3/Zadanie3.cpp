@@ -6,7 +6,7 @@ int main()
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            if ((i > 0) && (j > 0)) {
+            if (i > j) {
                 std::cout << ".";
             } else
             std::cout << "X";
