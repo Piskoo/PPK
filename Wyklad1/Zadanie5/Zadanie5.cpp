@@ -8,9 +8,9 @@ int main()
         {
             int M = N / 2;
 
-            if ((i > j and j < N / 2) or (j > N / 2) and i < j)
+            if (((i > j) and (i <= M)) or ((i < j) and (i >= M)))
                 std::cout << ".";
-            else 
+            else
                 std::cout << "X";
         }
         std::cout << std::endl;
