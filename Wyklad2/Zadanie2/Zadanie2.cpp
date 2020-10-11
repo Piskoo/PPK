@@ -8,6 +8,7 @@ int main()
     double tab2[N] = { 71.2, 34.1, 1.1, 3.14, 2.51 };
     double tab3[M + N] = {};
     int h = 0;
+    double sort = 0;
 
     for (int i = 0; i < M + N; i++) {
         if (i < M) {
@@ -19,12 +20,17 @@ int main()
     }
         std::cout << tab3[i] << " ";
     }
-
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
-
+    std::cout << std::endl;
+    for (int i = 0; i < M+N; i++) {
+        for (int j = 0; j < N+M-1; j++) {
+            if (tab3[j] > tab3[j + 1]) {
+                sort = tab3[j];
+                tab3[j] = tab3[j + 1];
+                tab3[j + 1] = sort;
+            }
         }
     }
+    for(int i =0;i < M+N; i++) std::cout << tab3[i] << " ";
 
 
 
